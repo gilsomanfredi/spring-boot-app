@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import io.github.gilsomanfredi.springbootapp.domain.Client;
 import io.github.gilsomanfredi.springbootapp.service.client.ClientHibernateService;
+import io.github.gilsomanfredi.springbootapp.service.client.ClientJdbcService;
 import lombok.RequiredArgsConstructor;
 
 /**
@@ -32,7 +33,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class ClientController {
 
-    private final ClientHibernateService clientService;
+//    private final ClientHibernateService clientService;
+    private final ClientJdbcService clientService;
 
     @GetMapping("/{id}")
     public ResponseEntity<Client> findOne(@PathVariable Long id) {
