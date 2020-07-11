@@ -1,0 +1,13 @@
+version: '3.0'
+
+services:
+  postgres:
+    container_name: spring-boot-app-postgres
+    hostname: spring-postgres
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: "PW@234"
+      POSTGRES_USER: "postgres"
+      POSTGRES_DB: "postgres"
